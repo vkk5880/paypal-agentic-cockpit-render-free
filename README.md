@@ -15,7 +15,7 @@
 **The trust and safety layer for AI-driven commerce.**  
 AegisPay lets autonomous AI shopping agents research products, negotiate deals, and purchase across multi-vendor storefronts safely. It gives consumers guaranteed budget protection with 1-prompt buying, automatically recovers money if prices drop within 72 hours, and resolves damaged return disputes in minutes with AI visual forensics—all built natively on PayPal payment rails.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vkk5880/Aegispay)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vkk5880/paypal-agentic-cockpit-render-free)
 
 [Live Cockpit](http://localhost:3000) • [Evaluation & Chaos Lab](http://localhost:3000/judge) • [Negative Testing Simulator](http://localhost:3000/simulator) • [PayPal Integration Dossier](docs/PAYPAL_INTEGRATION.md) • [AG Grid Architecture](docs/AG_GRID.md)
 
@@ -582,7 +582,7 @@ AegisPay is engineered for one-click deployment on **Render** via Infrastructure
 
 1. Click the **Deploy to Render** button:
    
-   [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vkk5880/Aegispay)
+   [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vkk5880/paypal-agentic-cockpit-render-free)
 
 2. In the Render Dashboard:
    - Provide your environment variables (or let Render generate secrets).
