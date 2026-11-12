@@ -1,0 +1,33 @@
+# ==============================================================================
+# AegisPay Render Blueprint IaC Specification (Free Tier Single Web Service)
+# Target: Render Free-tier 1-instance standalone Next.js Cockpit
+# ==============================================================================
+
+services:
+  - type: web
+    name: aegispay-cockpit
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: pnpm install --no-frozen-lockfile && pnpm build
+    startCommand: pnpm --filter @aegispay/web-cockpit start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      - key: NEXT_PUBLIC_PAYPAL_CLIENT_ID
+        sync: false
+      - key: NEXT_PUBLIC_AG_GRID_LICENSE_KEY
+        sync: false
+      - key: NEXT_PUBLIC_DEV_TOOLS
+        value: "true"
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_ENVIRONMENT
+        value: sandbox

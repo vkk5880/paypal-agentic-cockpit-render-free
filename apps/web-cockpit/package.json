@@ -1,0 +1,40 @@
+{
+  "name": "@aegispay/web-cockpit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbo -p 3000",
+    "build": "NODE_ENV=production next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "tsx --test src/lib/origin.test.ts src/context/authContext.test.ts src/app/judge/e2eProductionPipeline.test.ts src/app/judge/chaosSimulator.test.ts src/components/ag-studio/merchantWidgets.test.ts src/components/bryntum/DisputeSlaScheduler.test.ts src/components/common/canvasEffects.test.ts src/lib/share.test.ts src/hooks/useX402.test.ts src/components/merchant/merchantReporting.test.ts src/components/ag-grid/renderers/renderers.test.ts src/components/ag-grid/agGridIntegration.test.ts"
+  },
+  "dependencies": {
+    "@aegispay/shared-types": "workspace:*",
+    "@bryntum/scheduler-trial": "^7.3.8",
+    "@duckdb/duckdb-wasm": "1.33.1-dev57.0",
+    "ag-grid-community": "^36.3.0",
+    "ag-grid-enterprise": "^36.3.0",
+    "ag-grid-react": "^36.3.0",
+    "ag-studio": "^3.1.0",
+    "ag-studio-react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "ag-mcp": {
+      "command": "ag-mcp",
+      "args": []
+    },
+    "bryntum": {
+      "url": "https://mcp.bryntum.com/"
+    },
+    "channel3": {
+      "url": "https://mcp.trychannel3.com/"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #0284c7;
+  --accent-foreground: #ffffff;
+  --pp-navy: #001c64;
+  --pp-blue: #0070e0;
+  --pp-blue-dark: #003087;
+  --pp-sky: #009cde;
+  --pp-highlight: #e6f0fc;
+  --pp-canvas: #f5f7fa;
+  --pp-surface: #ffffff;
+  --pp-border: #dbe1e8;
+  --pp-gridline: #e9edf2;
+  --pp-ink: #001435;
+  --pp-muted: #545d68;
+  --pp-success: #00875a;
+  --pp-warning: #b45309;
+  --pp-danger: #c4122f;
+  --pp-font: "PayPal Open", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dark {
+  --background: #060b14;
+  --foreground: #f8fafc;
+  --card: #0c1424;
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
+  --muted: #080d19;
+  --muted-foreground: #94a3b8;
+  --accent: #06b6d4;
+  --accent-foreground: #060b14;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.011em;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.8);
+}
+
+/* ── Modern SaaS Glassmorphism & Surface Utilities ── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+.dark .glass-panel {
+  background: rgba(12, 20, 36, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dark .glass-card {
+  background: rgba(14, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 12px 32px -4px rgba(6, 182, 212, 0.12), 0 4px 16px -2px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+.dark .glass-card:hover {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 16px 36px -4px rgba(6, 182, 212, 0.18), 0 0 24px -2px rgba(6, 182, 212, 0.1);
+}
+
+/* ── Glowing Micro-Accents ── */
+.glow-cyan {
+  box-shadow: 0 0 20px -2px rgba(6, 182, 212, 0.35);
+}
+.glow-blue {
+  box-shadow: 0 0 20px -2px rgba(0, 112, 224, 0.35);
+}
+.glow-emerald {
+  box-shadow: 0 0 20px -2px rgba(16, 185, 129, 0.35);
+}
+.glow-purple {
+  box-shadow: 0 0 20px -2px rgba(147, 51, 234, 0.35);
+}
+.glow-amber {
+  box-shadow: 0 0 20px -2px rgba(245, 158, 11, 0.35);
+}
+.glow-rose {
+  box-shadow: 0 0 20px -2px rgba(244, 63, 94, 0.35);
+}
+
+/* ── Subtle Dot Grid Background ── */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.dark .bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Autonomous Commerce Animations & Utilities ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-pulse-dot {
+  animation: pulseDot 1.2s ease-in-out infinite;
+}
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #f8fafc, #edf2f7, #f1f5f9, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientShift 14s ease infinite;
+}
+.dark .gradient-bg {
+  background: linear-gradient(-45deg, #060b14, #0c1424, #080f1a, #060b14);
+  background-size: 400% 400%;
+  animation: gradientShift 14s ease infinite;
+}
+
+.card-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.12);
+}
+
+.score-bar-fill {
+  transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  background: linear-gradient(90deg, #0284c7, #06b6d4);
+  border-radius: 9999px;
+  height: 100%;
+}
+
+/* ── Marquee Keyframes & Utilities ── */
+@keyframes marqueeLeft {
+  0% { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0%, 0, 0); }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 28s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight 28s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 2.5s ease-in-out infinite;
+}
+
+/* Accessibility: prefers-reduced-motion override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in-up,
+  .animate-pulse-dot,
+  .animate-marquee-left,
+  .animate-marquee-right,
+  .animate-spin-slow,
+  .gradient-bg,
+  .shimmer-effect {
+    animation: none !important;
+  }
+
+  .card-hover:hover {
+    transform: none !important;
+  }
+}

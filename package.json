@@ -1,0 +1,16 @@
+{
+  "name": "paypal-agentic-cockpit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter @aegispay/shared-types build && pnpm --filter @aegispay/web-cockpit build",
+    "start": "pnpm --filter @aegispay/web-cockpit start",
+    "dev": "pnpm --filter @aegispay/web-cockpit dev",
+    "lint": "pnpm --filter @aegispay/web-cockpit lint",
+    "test": "pnpm --filter @aegispay/web-cockpit test"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
